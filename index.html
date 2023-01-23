@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container_header">
+        <button class="button_header" id="header_button">
+          Create new user
+        </button>
+      </div>
+    </header>
+
+    <main class="main_container">
+      <table class="main_table">
+        <thead>
+          <tr>
+            <th class="head_table">Name</th>
+            <th class="head_table">Second name</th>
+            <th class="head_table">Country</th>
+            <th class="head_table">Salary (USD)</th>
+            <th class="head_table">Position</th>
+            <th class="head_table_actions">Actions</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="body_table">Juan</td>
+            <td class="body_table">Perez</td>
+            <td class="body_table">Venezuela</td>
+            <td class="body_table">10</td>
+            <td class="body_table">Teacher</td>
+            <td class="body_table_delete">
+              <i class="material-icons">delete</i>
+            </td>
+          </tr>
+          <tr>
+            <td class="body_table">Ana Maria</td>
+            <td class="body_table">Sosa Alvarez</td>
+            <td class="body_table">Colombia</td>
+            <td class="body_table">250</td>
+            <td class="body_table">Driver</td>
+            <td class="body_table_delete">
+              <i class="material-icons">delete</i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+    <div class="new_user_container close_user" id="second_container">
+      <div class="new_user " id="container_new_user">
+    <h2 class="title_user">Add a new user</h2>
+    <input type="text" class="inputs" placeholder="Name" />
+    <input type="text" class="inputs" placeholder="Second name" />
+    <input type="text" class="inputs" placeholder="Country" />
+    <input type="text" class="inputs" placeholder="Salary (USD)" />
+    <input type="text" class="inputs" placeholder="Position" />
+    <div class="container_buttons">
+      <button class="button_cancel" id="btn_cancel">Cancel</button>
+      <button class="button_create">Create user</button>
+    </div>
+  </div>
+    </div>
+     
+
+    <script src="./index.js"></script>
+  </body>
+</html>

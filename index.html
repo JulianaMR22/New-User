@@ -39,8 +39,8 @@
           </tr>
         </thead>
 
-        <tbody>
-          <tr>
+        <tbody id="principal_table">
+          <!--  <tr>
             <td class="body_table">Juan</td>
             <td class="body_table">Perez</td>
             <td class="body_table">Venezuela</td>
@@ -59,25 +59,44 @@
             <td class="body_table_delete">
               <i class="material-icons">delete</i>
             </td>
-          </tr>
+          </tr> -->
         </tbody>
       </table>
     </main>
     <div class="new_user_container close_user" id="second_container">
-      <div class="new_user " id="container_new_user">
-    <h2 class="title_user">Add a new user</h2>
-    <input type="text" class="inputs" placeholder="Name" />
-    <input type="text" class="inputs" placeholder="Second name" />
-    <input type="text" class="inputs" placeholder="Country" />
-    <input type="text" class="inputs" placeholder="Salary (USD)" />
-    <input type="text" class="inputs" placeholder="Position" />
-    <div class="container_buttons">
-      <button class="button_cancel" id="btn_cancel">Cancel</button>
-      <button class="button_create">Create user</button>
+      <div class="new_user" id="container_new_user">
+        <h2 class="title_user">Add a new user</h2>
+        <input type="text" class="inputs" id="input_name" placeholder="Name" />
+        <input
+          type="text"
+          class="inputs"
+          id="input_second"
+          placeholder="Second name"
+        />
+        <input
+          type="text"
+          class="inputs"
+          id="input_country"
+          placeholder="Country"
+        />
+        <input
+          type="text"
+          class="inputs"
+          id="input_salary"
+          placeholder="Salary (USD)"
+        />
+        <input
+          type="text"
+          class="inputs"
+          id="input_position"
+          placeholder="Position"
+        />
+        <div class="container_buttons">
+          <button class="button_cancel" id="btn_cancel">Cancel</button>
+          <button class="button_create" id="btn_create">Create user</button>
+        </div>
+      </div>
     </div>
-  </div>
-    </div>
-     
 
     <script src="./index.js"></script>
   </body>

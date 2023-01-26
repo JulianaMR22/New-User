@@ -110,7 +110,6 @@
   margin-left: 20px;
   margin-top: 12px;
   margin-bottom: 12px;
- 
 }
 
 ::placeholder {
@@ -145,7 +144,6 @@
   margin-bottom: 20px;
   font-family: "Inter", sans-serif;
   cursor: pointer;
-
 }
 
 .close_user {
@@ -156,7 +154,21 @@
   display: flex;
 }
 
-.icon_delete{
+.icon_delete {
   cursor: pointer;
+  color: red;
+}
+
+.error_message {
+  display: none;
+}
+
+.show_error {
+  display: block;
+  font-size: 15px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  font-family: "Inter", sans-serif;
   color: red;
 }

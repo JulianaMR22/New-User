@@ -8,6 +8,8 @@ let input_country = document.getElementById("input_country");
 let input_salary = document.getElementById("input_salary");
 let input_position = document.getElementById("input_position");
 let principal_table = document.getElementById("principal_table");
+let form_new_user = document.getElementById("container_new_user");
+let error_message = document.getElementById("message_error");
 
 function closeModal() {
   container_user.classList.add("close_user");
@@ -42,17 +44,28 @@ function addNewUser() {
   `;
 }
 
-function validateInputs() {
+function checkInputs() {
+  const nameValue = input_name.value.trim();
+  const secondValue = input_second.value.trim();
+  const countryValue = input_country.value.trim();
+  const salaryValue = input_salary.value.trim();
+  const positionValue = input_position.value.trim();
+
   if (
-    input_name.value === "" ||
-    input_second.value === "" ||
-    input_country.value === "" ||
-    input_salary.value === "" ||
-    input_position.value === ""
+    !nameValue ||
+    !secondValue ||
+    !countryValue ||
+    !salaryValue ||
+    !positionValue
   ) {
-    alert("Por favor diligenciar todos los espacios en blanco");
+    error_message.classList.remove("error_message");
+    error_message.classList.add("show_error");
+    openModal();
   } else {
     addNewUser();
+    closeModal();
+    error_message.classList.add("error_message");
+    error_message.classList.remove("show_error");
   }
 }
 
@@ -61,10 +74,12 @@ header_button.addEventListener("click", function () {
 });
 btn_cancel.addEventListener("click", function () {
   closeModal();
+  clearInputs();
+  error_message.classList.add("error_message");
+  error_message.classList.remove("show_error");
 });
 
 btn_create.addEventListener("click", function () {
-  validateInputs();
+  checkInputs();
   clearInputs();
-  closeModal();
 });

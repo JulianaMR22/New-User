@@ -27,6 +27,7 @@ function clearInputs() {
   input_country.value = "";
   input_salary.value = "";
   input_position.value = "";
+  
 }
 
 function addNewUser() {
@@ -44,6 +45,24 @@ function addNewUser() {
   `;
 }
 
+function error_inputs() {
+  input_name.classList.add("inputs_error_form");
+  input_second.classList.add("inputs_error_form");
+  input_country.classList.add("inputs_error_form");
+  input_salary.classList.add("inputs_error_form");
+  input_position.classList.add("inputs_error_form");
+
+}
+
+function clear_error_inputs(){
+   input_name.classList.remove("inputs_error_form");
+   input_second.classList.remove("inputs_error_form");
+   input_country.classList.remove("inputs_error_form");
+   input_salary.classList.remove("inputs_error_form");
+   input_position.classList.remove("inputs_error_form");
+}
+
+
 function checkInputs() {
   const nameValue = input_name.value.trim();
   const secondValue = input_second.value.trim();
@@ -60,9 +79,11 @@ function checkInputs() {
   ) {
     error_message.classList.remove("error_message");
     error_message.classList.add("show_error");
-    openModal();
+    error_inputs();
   } else {
     addNewUser();
+    clear_error_inputs();
+    clearInputs();
     closeModal();
     error_message.classList.add("error_message");
     error_message.classList.remove("show_error");
@@ -75,11 +96,12 @@ header_button.addEventListener("click", function () {
 btn_cancel.addEventListener("click", function () {
   closeModal();
   clearInputs();
+  clear_error_inputs();
   error_message.classList.add("error_message");
   error_message.classList.remove("show_error");
 });
 
 btn_create.addEventListener("click", function () {
   checkInputs();
-  clearInputs();
 });
+

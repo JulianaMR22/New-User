@@ -112,6 +112,10 @@
   margin-bottom: 12px;
 }
 
+.inputs_error_form {
+  border: 1px solid red;
+}
+
 ::placeholder {
   color: #bbbbbb;
   font-family: "Inter", sans-serif;
